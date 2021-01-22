@@ -77,7 +77,7 @@ int main(void)
 {
 	int b, c = 0;
 
-	printf("バッテリー残量監視ツールv1.0.0 (c) Daichi Shigechika 2020.\n\n");
+	printf("バッテリー残量監視ツールv1.0.0 (c) Chishige 2020.\n\n");
 	firstcheck();
 	while (1) {
 		GetSystemPowerStatus(&sps);									//バッテリー状態を取得
