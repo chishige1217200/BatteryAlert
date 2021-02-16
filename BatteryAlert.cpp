@@ -17,13 +17,13 @@ void firstcheck(void) {
 	GetSystemPowerStatus(&sps);															//システムの電源状態を取得
 	if (sps.BatteryFlag == 128)															//バッテリーが存在しないとき
 	{
-		printf("バッテリーが検出されませんでした．自動で終了します．\n Error Code 1.");
+		printf("バッテリーが検出されませんでした．自動で終了します．\nError Code: 1");
 		Sleep(5000);																	//5秒待機する
 		exit(1);																		//コード1を返し、終了
 	}
 	else if (sps.BatteryFlag == 256)													//バッテリーが不明な状態のとき
 	{
-		printf("バッテリーが不明な状態です．自動で終了します．\nError Code 2.");
+		printf("バッテリーが不明な状態です．自動で終了します．\nError Code: 2");
 		Sleep(5000);																	//5秒待機する
 		exit(2);																		//コード2を返し、終了
 	}
@@ -77,7 +77,7 @@ int main(void)
 {
 	int b, c = 0;
 
-	printf("バッテリー残量監視ツールv1.0.0 (c) Daichi Shigechika 2020.\n\n");
+	printf("バッテリー残量監視ツールv1.0.0 (c) Chishige 2020 - 2021.\n\n");
 	firstcheck();
 	while (1) {
 		GetSystemPowerStatus(&sps);									//バッテリー状態を取得
